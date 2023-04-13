@@ -1,0 +1,39 @@
+.pole{
+  height: 200px;
+  width: 15px;
+  margin-left: 350px;
+  background-color: black;
+}
+
+.blackbox{
+  background-color: black;
+  display: inline-block;
+  margin-top: 100px;
+  margin-left: -44px;
+}
+
+.light{
+  width: 100px;
+  height: 100px;
+  margin: 1px;
+  border-radius: 50%
+}
+
+.red{
+  background-color: red;
+}
+.green{
+  background-color: green;
+}
+.yellow{
+  background-color: yellow;
+}
+.glowy{
+  box-shadow: 0px 0px 15px 20px yellow;
+}
+.glowr{
+  box-shadow: 0px 0px 15px 20px red;
+}
+.glowg{
+  box-shadow: 0px 0px 15px 20px green;
+}
