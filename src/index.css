@@ -28,6 +28,10 @@
 .yellow{
   background-color: yellow;
 }
+.purple{
+  background-color: purple;
+}
+
 .glowy{
   box-shadow: 0px 0px 15px 20px yellow;
 }
@@ -36,4 +40,7 @@
 }
 .glowg{
   box-shadow: 0px 0px 15px 20px green;
+}
+.glowp{
+  box-shadow: 0px 0px 15px 20px purple;
 }

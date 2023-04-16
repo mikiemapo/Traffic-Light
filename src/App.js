@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const TrafficLight = () => {
   const [trafficColor, setTrafficColor] = useState("");
-
+  const [purple, setPurple] = useState(true);
   useEffect(() => {
     const redTimeout = setTimeout(() => {
       setTrafficColor("red");
@@ -33,6 +33,8 @@ const TrafficLight = () => {
     };
   }, []);
 
+
+
   return (
     <div className="pole">
       <div className="blackbox">
@@ -40,7 +42,6 @@ const TrafficLight = () => {
           className={"light red " + (trafficColor == "red" ? "glowr" : "")}
           onClick={() => setTrafficColor("red")}
         ></div>
-
         <div
           className={
             "light yellow " + (trafficColor == "yellow" ? "glowy" : "")
@@ -52,7 +53,14 @@ const TrafficLight = () => {
           className={"light green " + (trafficColor == "green" ? "glowg" : "")}
           onClick={() => setTrafficColor("green")}
         ></div>
+
+        <div
+          className={purple ? "d-none light purple" + (trafficColor == "purple" ? "glowp" : "") : "light purple" + '' +(trafficColor == "purple" ? " glowp" : "")}
+          onClick={() => setTrafficColor("purple")}
+        ></div>
       </div>
+      <button onClick={() => setPurple(!purple)}>Click me</button>
+      <div>purple state is : {purple ? 'true': 'false'}</div>
     </div>
   );
 };
