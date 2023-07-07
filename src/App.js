@@ -39,28 +39,28 @@ const TrafficLight = () => {
     <div className="pole">
       <div className="blackbox">
         <div
-          className={"light red " + (trafficColor == "red" ? "glowr" : "")}
+          className={"light red " + (trafficColor === "red" ? "glowr" : "")}
           onClick={() => setTrafficColor("red")}
         ></div>
         <div
           className={
-            "light yellow " + (trafficColor == "yellow" ? "glowy" : "")
+            "light yellow " + (trafficColor === "yellow" ? "glowy" : "")
           }
           onClick={() => setTrafficColor("yellow")}
         ></div>
 
         <div
-          className={"light green " + (trafficColor == "green" ? "glowg" : "")}
+          className={"light green " + (trafficColor === "green" ? "glowg" : "")}
           onClick={() => setTrafficColor("green")}
         ></div>
 
         <div
-          className={purple ? "d-none light purple" + (trafficColor == "purple" ? "glowp" : "") : "light purple" + '' +(trafficColor == "purple" ? " glowp" : "")}
+          className={purple ? "d-none light purple" + (trafficColor === "purple" ? "glowp" : "") : "light purple" + '' +(trafficColor === "purple" ? " glowp" : "")}
           onClick={() => setTrafficColor("purple")}
         ></div>
       </div>
-      <button onClick={() => setPurple(!purple)}>Click me</button>
-      <div>purple state is : {purple ? 'true': 'false'}</div>
+      <button className="btn btn-primary" onClick={() => setPurple(!purple)}>Click me</button>
+      <div>purple state is: {purple ? 'true' : 'false'}</div>
     </div>
   );
 };
